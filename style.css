@@ -72,6 +72,6 @@
 }
 
 .card-title:hover {
-    text-decoration-color: rgba(0, 0, 255, 1);
+    text-decoration-color: #e61763;
     text-underline-offset: 0.6em;
 }
