@@ -17,45 +17,59 @@
 
 <body>
     <div class="d-flex justify-content-center">
-        <div class="card" style="width: 30rem;">
+        <div class="card" style="width: 30rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
             <h5 class="card-title">Signup Form</h5>
             <div class="card-body">
-                <div class="row m-1 icon-bg">
-                    <!-- <center> -->
-                    <img src="userlogo.png" id="icon" alt="">
-                    <!-- </center> -->
+                <div class="row m-1">
+                    <center>
+                        <img src="userlogo.png" id="icon" alt="" style="height: 100px; width: 100px; border-radius: 50%; padding: 10px; background-color: #fcbcd3;">
+                        <!-- <h6 class=" m-2">Register Your Account here</h6> -->
+                    </center>
                 </div>
                 <div class="row m-2">
-                    <div class="col">
-                        <label for="">First Name</label>
-                        <input type="text" id="firstName" name="firstName">
+                    <div class="col-md-6">
+                        <label for="" class="label">First Name</label>
+                        <input class="input-field form-control" type="text" name="firstName" id="firstName"
+                            placeholder="First name">
                     </div>
-                    <div class="col">
-                        <label for="">Last Name</label>
-                        <input type="text" id="lastName" name="lastName">
-                    </div>
-                </div>
-                <div class="row m-2">
-                    <div class="col-12">
-                        <label for="">Email</label>
-                        <input type="email" id="email" name="email">
+                    <div class="col-md-6">
+                        <label for="" class="label">Last Name</label>
+                        <input class="input-field form-control" type="text" name="lastName" id="lastName"
+                            placeholder="Last name">
                     </div>
                 </div>
                 <div class="row m-2">
-                    <div class="col-12">
-                        <label for="">Password</label>
-                        <input type="password" id="password" name="password">
+                    <div class="col-md-12">
+                        <label for=""> Email Address</label>
+                        <input class="input-field form-control" type="email" name="email" id="email" placeholder="Enter your email">
                     </div>
                 </div>
-
+                <div class="row m-2">
+                    <div class="col-md-6">
+                        <label for=""> Password</label>
+                        <input class="input-field form-control" type="password" name="password" id="password"
+                            placeholder="Enter your password">
+                        <!-- <p id="passwordLength">Password must be at least 8 characters</p> -->
+                    </div>
+                    <div class="col-md-6">
+                        <label for="">Confirm Password</label>
+                        <input class="input-field form-control" type="password" name="confirmPassword" id="confirmPassword"
+                            placeholder="Confirm password">
+                        <p id="passwordMatch" style="display: none; color: green;">Password Matched</p>
+                        <p id="passwordNotMatched" style="display: none; color: red;">Incorrect Password</p>
+                    </div>
+                </div>
+                <div class="row m-2">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="button" class="btn btn-secondary btn-block">Already have an account? Login</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
     <script src="app.js"></script>
 </body>
-
 </html>
