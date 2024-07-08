@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: radial-gradient(#1D1842,#8E0D3C);
+}
+
+.card-title {
+    text-decoration: underline 0.15em rgba(0, 0, 0, 1);
+    text-underline-offset: 0.4em;
+    transition: text-decoration-color 300ms, text-underline-offset 300ms;
+  }
+  
+.card-title:hover {
+    text-decoration-color: rgba(0, 0, 255, 1);
+    text-underline-offset: 0.6em;
+  }
