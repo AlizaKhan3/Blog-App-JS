@@ -65,7 +65,8 @@
     background-color: #f9dce7;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 10px;
 }
 
 .card-title {
@@ -133,4 +134,24 @@ label {
 
 .custom-btn.btn-secondary:hover {
     background-color: #5a6268;
+}
+
+#passwordMatch{
+    display: none;
+    font-size: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+#passwordLength{
+    display: none;
+    font-size: 10px;
+    color: rgb(220, 4, 4);
+    font-weight: bold;
+}
+#passwordNotMatched{
+    display: none;
+    font-size: 10px;
+    color: rgb(220, 4, 4);
+    font-weight: bold;
 }

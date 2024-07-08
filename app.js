@@ -12,9 +12,7 @@ let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
-let passwordLength = document.getElementById("passwordLength");
-let passwordMatch = document.getElementById("passwordMatch");
-let passwordNotMatched = document.getElementById("passwordMatched");
+
 
 let emailRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -25,12 +23,13 @@ function signUp() {
     let userConfirmPass = confirmPassword.value.trim();
     let userPass = password.value.trim()
     let fullName = userFirstName + " " + userLastName;
+    let passwordLength = document.getElementById("passwordLength");
+    let passwordMatch = document.getElementById("passwordMatch");
+    let passwordNotMatched = document.getElementById("passwordMatched");
 
     if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length >= 8 && userPass === userConfirmPass) {
         console.log("Success");
         passwordMatch.style.display = "block";
-        passwordMatch.style.fontSize = 10 + "px";
-        passwordMatch.style.fontWeight = "bold";
         Swal.fire({
             icon: "success",
             title: "Welcome " + fullName.toLocaleUpperCase(),
@@ -41,24 +40,18 @@ function signUp() {
         setTimeout(() => {
             window.location.href = "./login.html"
         }, 2000)
-    } else if (!emailRegx.test(userEmail)) {
+
+    } else if (!emailRegx.test(userEmail) && userFirstName === "" && userLastName === "" && userPass === "" && userConfirmPass === "") {
         console.log("failed!");
         Swal.fire({
             icon: "error",
-            text: "*Please enter Valid Email*",
-            showConfirmButton: false,
-            timer: 2000
+            text: "Please fill all fields to register!",
+            showConfirmButton: true,
         });
-    } else if (userPass.length < 8) {
+    } else if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length < 8 && userPass === userConfirmPass) {
         passwordLength.style.display = "block";
-        passwordLength.style.fontSize = 10 + "px";
-        passwordLength.style.fontWeight = "bold";
         passwordMatch.style.display = "none";
-    } else if (userPass !== userConfirmPass) {
-        passwordNotMatched.style.display = "block";
-        passwordNotMatched.style.fontSize = 10 + "px";
-        passwordNotMatched.style.fontWeight = "bold";
-    } else{
-        console.log("perfect")
-    }
+    } else if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length >= 8 && userPass !== userConfirmPass) {
+      
+    } 
 }
