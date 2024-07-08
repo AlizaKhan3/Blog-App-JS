@@ -12,7 +12,9 @@ let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
-
+let passwordLength = document.getElementById("passwordLength");
+let passwordMatch = document.getElementById("passwordMatch");
+let passwordNotMatched = document.getElementById("passwordMatched");
 
 let emailRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
@@ -26,6 +28,9 @@ function signUp() {
 
     if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length >= 8 && userPass === userConfirmPass) {
         console.log("Success");
+        passwordMatch.style.display = "block";
+        passwordMatch.style.fontSize = 10 + "px";
+        passwordMatch.style.fontWeight = "bold";
         Swal.fire({
             icon: "success",
             title: "Welcome " + fullName.toLocaleUpperCase(),
@@ -40,16 +45,20 @@ function signUp() {
         console.log("failed!");
         Swal.fire({
             icon: "error",
-            text: "Please enter Valid Email",
+            text: "*Please enter Valid Email*",
             showConfirmButton: false,
             timer: 2000
         });
     } else if (userPass.length < 8) {
-        console.log("Password should not be less than 8!");
-
+        passwordLength.style.display = "block";
+        passwordLength.style.fontSize = 10 + "px";
+        passwordLength.style.fontWeight = "bold";
+        passwordMatch.style.display = "none";
+    } else if (userPass !== userConfirmPass) {
+        passwordNotMatched.style.display = "block";
+        passwordNotMatched.style.fontSize = 10 + "px";
+        passwordNotMatched.style.fontWeight = "bold";
+    } else{
+        console.log("perfect")
     }
 }
-
-// signup.addEventListener("click", signUp);
-
-// let emailRegex = "/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/"

@@ -51,7 +51,7 @@
                         <label for=""> Password</label>
                         <input class="input-field form-control" type="password" name="password" id="password"
                             placeholder="Enter your password">
-                        <p id="passwordLength" style="display: none;">Password must be at least 8 characters</p>
+                        <p id="passwordLength" style="display: none; color: red;">Password must be at least 8 characters</p>
                     </div>
                     <div class="col-md-6">
                         <label for="">Confirm Password</label>
@@ -61,19 +61,19 @@
                         <p id="passwordNotMatched" style="display: none; color: red;">Incorrect Password</p>
                     </div>
                 </div>
-                <center>
-                    <div class="row mt-3">
-                        <div class="col-md-12">
-                            <button type="button" onclick="signUp()" id="signup" class="btn btn-primary btn-block custom-btn mt-2">Signup</button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-secondary btn-block custom-btn">Already have an account? Login</button>
-                        </div>
-                    </div>
-                </center>
             </div>
+            <center>
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <button type="button" onclick="signUp()" id="signup" class="btn btn-primary btn-block custom-btn mt-2">Signup</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-secondary btn-block custom-btn">Already have an account? Login</button>
+                    </div>
+                </div>
+            </center>
         </div>
     </div>
       </form>
