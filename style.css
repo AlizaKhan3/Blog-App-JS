@@ -2,19 +2,76 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    /* color: white; */
 }
 
-body{
-    background: radial-gradient(#1D1842,#8E0D3C);
+/* Main Page */
+
+.main-bg{
+    background-image: linear-gradient(to bottom, #454b72, #1D1842, #8E0D3C);
+    background-position: center;
+    height: 100vh;
+    color: white;
+    margin: 0;
+    background-repeat: no-repeat;
+    animation: gradient-move 3s ease-in-out infinite;
+}
+
+/* Define the animation */
+@keyframes gradient-move {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.btn {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: #1D1842;
+    border-color: #1D1842;
+}
+
+.btn-secondary {
+    background-color: #8E0D3C;
+    border-color: #8E0D3C;
+}
+
+/* Signup page */
+.icon-bg{
+    background-color: #8E0D3C;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+#icon{
+    height: 100px;
+    width: 100px;
+
 }
 
 .card-title {
     text-decoration: underline 0.15em rgba(0, 0, 0, 1);
     text-underline-offset: 0.4em;
     transition: text-decoration-color 300ms, text-underline-offset 300ms;
-  }
-  
+}
+
 .card-title:hover {
     text-decoration-color: rgba(0, 0, 255, 1);
     text-underline-offset: 0.6em;
-  }
+}
