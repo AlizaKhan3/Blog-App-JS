@@ -62,7 +62,12 @@
     padding: 10px;
 
 }
-
+.card {
+    background-color: #f9dce7;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 .card-title {
     text-decoration: underline 0.15em rgba(0, 0, 0, 1);
     text-underline-offset: 0.4em;
@@ -83,10 +88,49 @@
 
 .input-field:hover {
     border-bottom: 2px solid #e61763;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-field:focus {
+    border-bottom: 2px solid #e61763;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 label {
     color: rgb(90, 88, 88);
     font-weight: 600;
+    padding-left: 12px;
+}
+
+.custom-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.custom-btn:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.custom-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.custom-btn.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.custom-btn.btn-primary:hover {
+    background-color: #0069d9;
+}
+
+.custom-btn.btn-secondary:hover {
+    background-color: #5a6268;
 }

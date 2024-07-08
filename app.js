@@ -1,7 +1,7 @@
-let SignupBtn = document.getElementById("SignupBtn");
+let getStart = document.getElementById("getStart");
 
-function signup(){
+function getStarted(){
     setInterval(()=>{
  window.location.href = "./signup.html"
-    },2000)
+    },1000)
 }

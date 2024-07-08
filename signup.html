@@ -18,12 +18,12 @@
 <body>
     <div class="d-flex justify-content-center">
         <div class="card" style="width: 30rem; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-            <h5 class="card-title">Signup Form</h5>
+            <h5 class="card-title m-3">Signup Form</h5>
             <div class="card-body">
                 <div class="row m-1">
                     <center>
-                        <img src="userlogo.png" id="icon" alt="" style="height: 100px; width: 100px; border-radius: 50%; padding: 10px; background-color: #fcbcd3;">
-                        <!-- <h6 class=" m-2">Register Your Account here</h6> -->
+                        <img src="userlogo.png" id="icon" alt=""
+                            style="height: 100px; width: 100px; border-radius: 50%; padding: 10px; background-color: #fcbcd3;">
                     </center>
                 </div>
                 <div class="row m-2">
@@ -41,7 +41,8 @@
                 <div class="row m-2">
                     <div class="col-md-12">
                         <label for=""> Email Address</label>
-                        <input class="input-field form-control" type="email" name="email" id="email" placeholder="Enter your email">
+                        <input class="input-field form-control" type="email" name="email" id="email"
+                            placeholder="Enter your email">
                     </div>
                 </div>
                 <div class="row m-2">
@@ -53,23 +54,28 @@
                     </div>
                     <div class="col-md-6">
                         <label for="">Confirm Password</label>
-                        <input class="input-field form-control" type="password" name="confirmPassword" id="confirmPassword"
-                            placeholder="Confirm password">
+                        <input class="input-field form-control" type="password" name="confirmPassword"
+                            id="confirmPassword" placeholder="Confirm password">
                         <p id="passwordMatch" style="display: none; color: green;">Password Matched</p>
                         <p id="passwordNotMatched" style="display: none; color: red;">Incorrect Password</p>
                     </div>
                 </div>
-                <div class="row m-2">
-                    <div class="col-md-6">
-                        <button type="submit" class="btn btn-primary btn-block">Signup</button>
+                <center>
+                    <div class="row mt-3">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary btn-block custom-btn mt-2">Signup</button>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <button type="button" class="btn btn-secondary btn-block">Already have an account? Login</button>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-secondary btn-block custom-btn">Already have an account? Login</button>
+                        </div>
                     </div>
-                </div>
+                </center>
             </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
