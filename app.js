@@ -27,6 +27,12 @@ let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
+
+// let icon = document.getElementById("icon");
+// icon.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
+// // var src = document.getElementById("header");
+// src.appendChild(icon);
+
 let emailRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 // SIGNUP PAGE
@@ -84,10 +90,10 @@ function signUp() {
     // Setting up local storage to store user data
     var mylocalStorage = localStorage.getItem("userAccounts");
     var arrData = JSON.parse(mylocalStorage); //  || []; // Initialize an empty array if no data exists
- if(!arrData){
-    arrData = [];
+    if (!arrData) {
+        arrData = [];
 
- }
+    }
 
 
     var userAccounts = {
@@ -116,10 +122,36 @@ function signUp() {
 
 
 //Blog Page
-  const quill = new Quill('#editor', {
-    theme: 'bubble', // Specify theme in configuration
-  });
+const toolbarOptions = [
+    ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
+    ['blockquote', 'code-block'],
+    ['link', 'image', 'video', 'formula'],
+  
+    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+    [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+    [{ 'direction': 'rtl' }],                         // text direction
+  
+    [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+    [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+  
+    [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+    [{ 'font': [] }],
+    [{ 'align': [] }],
+  
+    ['clean']                                         // remove formatting button
+  ];
 
-// const quill = new Quill('#editor', {
-//     theme: 'snow'
-//   });
+const quill = new Quill('#editor', {
+    modules: {
+        toolbar: toolbarOptions
+    },
+    theme: 'bubble', // Specify theme in configuration
+    placeholder: "Write something....",
+});
+
+
+function submit(){
+    console.log(quill.getContents());
+}
