@@ -6,7 +6,7 @@ function getStarted() {
 }
 
 let getStartedLogin = document.getElementById("getStartedLogin");
-function getStartedLogin(){
+function Login(){
     setInterval(()=>{
         window.location.href = "./login.html"
     },2000)
