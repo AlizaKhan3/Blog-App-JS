@@ -11,16 +11,36 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    <h1>MY BLOG APP</h1>
-    <div class="container">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.bubble.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Blog Page</title>
+</head>
+
+<body>
+
+    <!-- <h1>MY BLOG APP</h1> -->
+    <div class="row">
+        <div class="col-2" style="background-color: brown;">
+
+        </div>
+        <div class="col" style="background-color: rgb(98, 255, 0);">
+            <div class="editor">
+                <div id="editor"></div>
+            </div>
+        </div>
+        <div class="col-2" style="background-color: rgb(102, 11, 198);">
+            <div class="editor">
+                <div id="editor"></div>
+            </div>
+        </div>
     </div>
 
 
     <script src="app.js"></script>
 </body>
+
 </html>

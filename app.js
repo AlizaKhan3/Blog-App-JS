@@ -6,11 +6,20 @@ function getStarted() {
 }
 
 let getStartedLogin = document.getElementById("getStartedLogin");
-function Login(){
-    setInterval(()=>{
+function Login() {
+    setInterval(() => {
         window.location.href = "./login.html"
-    },2000)
+    }, 2000)
 }
+
+// onclick="renderBlogPage()" id="renderBlogPage" 
+let blogPageButton = document.getElementById("blogPageButton");
+function renderBlogPage() {
+    setInterval(() => {
+        window.location.href = "./blog.html";
+    }, 2000)
+}
+
 
 let signup = document.getElementById("signup");
 let firstName = document.getElementById("firstName");
@@ -18,10 +27,9 @@ let lastName = document.getElementById("lastName");
 let email = document.getElementById("email");
 let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
-
-
 let emailRegx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
+// SIGNUP PAGE
 function signUp() {
     let userEmail = email.value.trim();
     let userFirstName = firstName.value.trim();
@@ -73,12 +81,14 @@ function signUp() {
         });
     }
 
-    //Setting up local storage to store user data
+    // Setting up local storage to store user data
     var mylocalStorage = localStorage.getItem("userAccounts");
-    var arrData = JSON.parse(mylocalStorage);
-    if (!arrData) {
-        arrData = [];
-    }
+    var arrData = JSON.parse(mylocalStorage); //  || []; // Initialize an empty array if no data exists
+ if(!arrData){
+    arrData = [];
+
+ }
+
 
     var userAccounts = {
         userFirstName: userFirstName,
@@ -88,7 +98,32 @@ function signUp() {
     }
 
     arrData.push(userAccounts);
-    localStorage.setItem("userAccouts", JSON.stringify(arrData));
-    console.log(userAccounts);
-    //Setting up local storage
+
+    localStorage.setItem("userAccounts", JSON.stringify(arrData)); // Note the correct key name
+    console.log(arrData);
 }
+// ----------------------------------------------------------------------
+
+//LOGIN Page ---incomplete
+// function signUp() {
+//     let userFirstName = firstName.value.trim();
+//     let userLastName = lastName.value.trim();
+//     let userEmail = email.value.trim();
+//     let userPass = password.value.trim();
+//     let fullName = userFirstName + " " + userLastName;
+
+
+// }
+
+
+
+
+
+//Blog Page
+  const quill = new Quill('#editor', {
+    theme: 'bubble', // Specify theme in configuration
+  });
+
+// const quill = new Quill('#editor', {
+//     theme: 'snow'
+//   });
