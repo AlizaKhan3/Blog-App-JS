@@ -1,9 +1,15 @@
 let getStart = document.getElementById("getStart");
-
 function getStarted() {
     setInterval(() => {
         window.location.href = "./signup.html"
     }, 1000)
+}
+
+let getStartedLogin = document.getElementById("getStartedLogin");
+function getStartedLogin(){
+    setInterval(()=>{
+        window.location.href = "./login.html"
+    },2000)
 }
 
 let signup = document.getElementById("signup");
@@ -23,35 +29,66 @@ function signUp() {
     let userConfirmPass = confirmPassword.value.trim();
     let userPass = password.value.trim()
     let fullName = userFirstName + " " + userLastName;
-    let passwordLength = document.getElementById("passwordLength");
-    let passwordMatch = document.getElementById("passwordMatch");
-    let passwordNotMatched = document.getElementById("passwordMatched");
 
-    if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length >= 8 && userPass === userConfirmPass) {
-        console.log("Success");
-        passwordMatch.style.display = "block";
+    const passwordLength = document.getElementById("passwordLength");
+    const passwordMatch = document.getElementById("passwordMatch");
+    const passwordNotMatched = document.getElementById("passwordNotMatched");
+
+    // Reset display styles
+    passwordLength.style.display = "none";
+    passwordMatch.style.display = "none";
+    passwordNotMatched.style.display = "none";
+
+    if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail)) {
+        if (userPass.length >= 8 && userPass === userConfirmPass) {
+            console.log("Success");
+            passwordMatch.style.display = "block";
+            Swal.fire({
+                icon: "success",
+                title: "Welcome " + fullName.toLocaleUpperCase(),
+                text: "Lets Create and Share together",
+                showConfirmButton: false,
+                timer: 2000
+            });
+            setTimeout(() => {
+                window.location.href = "./blog.html"
+            }, 2000)
+        } else if (userPass.length < 8) {
+            passwordLength.style.display = "block";
+        } else if (userPass !== userConfirmPass) {
+            passwordNotMatched.style.display = "block";
+        }
+    } else if (!emailRegx.test(email)) {
+        console.log("please enter a valid emial")
         Swal.fire({
-            icon: "success",
-            title: "Welcome " + fullName.toLocaleUpperCase(),
-            // text: "Welcome " + fullName.toLocaleUpperCase(),
-            showConfirmButton: false,
-            timer: 2000
+            icon: "error",
+            text: "Please enter valid email ID",
+            showConfirmButton: true,
         });
-        setTimeout(() => {
-            window.location.href = "./login.html"
-        }, 2000)
-
-    } else if (!emailRegx.test(userEmail) && userFirstName === "" && userLastName === "" && userPass === "" && userConfirmPass === "") {
-        console.log("failed!");
+    } else {
         Swal.fire({
             icon: "error",
             text: "Please fill all fields to register!",
             showConfirmButton: true,
         });
-    } else if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length < 8 && userPass === userConfirmPass) {
-        passwordLength.style.display = "block";
-        passwordMatch.style.display = "none";
-    } else if (userFirstName !== "" && userLastName !== "" && emailRegx.test(userEmail) && userPass.length >= 8 && userPass !== userConfirmPass) {
-      
-    } 
+    }
+
+    //Setting up local storage to store user data
+    var mylocalStorage = localStorage.getItem("userAccounts");
+    var arrData = JSON.parse(mylocalStorage);
+    if (!arrData) {
+        arrData = [];
+    }
+
+    var userAccounts = {
+        userFirstName: userFirstName,
+        userLastName: userLastName,
+        userEmail: userEmail,
+        userPass: userPass
+    }
+
+    arrData.push(userAccounts);
+    localStorage.setItem("userAccouts", JSON.stringify(arrData));
+    console.log(userAccounts);
+    //Setting up local storage
 }
