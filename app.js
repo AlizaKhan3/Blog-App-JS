@@ -111,11 +111,7 @@ function signUp() {
 //     let userEmail = email.value.trim();
 //     let userPass = password.value.trim();
 //     let fullName = userFirstName + " " + userLastName;
-
-
 // }
-
-
 
 
 

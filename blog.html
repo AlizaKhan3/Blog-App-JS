@@ -21,20 +21,98 @@
 </head>
 
 <body>
-
     <!-- <h1>MY BLOG APP</h1> -->
-    <div class="row">
-        <div class="col-2" style="background-color: brown;">
-
-        </div>
-        <div class="col" style="background-color: rgb(98, 255, 0);">
-            <div class="editor">
-                <div id="editor"></div>
+    <div class="myContainer">
+        <div class="row">
+            <!-- left panel -->
+            <div class="col-3">
+                <!-- The side panel -->
+                <div class="sidebar">
+                    <div class="sidebar-header">
+                        <div class="row">
+                            <div class="col">
+                                <img src="doll.jpeg" id="icon" alt="" style="height: 60px; width: 60px; border-radius: 50%; padding: 2px; background-color: #99ff0bb7;">
+                            </div>
+                           <div class="col">
+                                 <h6 id="user-name">User Name</h6>
+                           </div>
+                       
+                        </div>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-gear m-2"></i>Settings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-signs-post m-2"></i>New Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-face-smile-beam m-2"></i>Friends</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fa-solid fa-people-group m-2"></i>Groups</a>
+                        </li>
+                        <!-- Add more items here -->
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="col-2" style="background-color: rgb(102, 11, 198);">
-            <div class="editor">
-                <div id="editor"></div>
+         
+            <div class="col" style="background-color: rgb(133, 134, 131); height: 100vh;">
+                <ul class="nav justify-content-center" style="background-color: rgb(255, 255, 255);">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Active</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="editor">
+                            <div id="editor"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- right panel -->
+            <div class="col-2" style="background-color: rgb(102, 11, 198);">
+                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                    aria-controls="offcanvasExample"><i class="fa-solid fa-gear"></i>
+                    Link with href
+                </a>
+                <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    Button with data-bs-target
+                  </button>
+                   -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            Some text as placeholder. In real life you can have the elements you have chosen. Like,
+                            text, images, lists, etc.
+                        </div>
+                        <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Dropdown button
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
