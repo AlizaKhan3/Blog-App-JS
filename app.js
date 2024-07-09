@@ -122,7 +122,7 @@ function signUp() {
 
 
 //Blog Page
-const toolbarOptions = [
+const toolbarOptions =[
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
     ['link', 'image', 'video', 'formula'],
@@ -153,5 +153,9 @@ const quill = new Quill('#editor', {
 
 
 function submit(){
-    console.log(quill.getContents());
+    event.preventDefault("");
+    const post = document.getElementById("post");
+    // console.log(quill.root.innerHTML);
+    // post.innerHTML = quill.root.innerHTML;
+
 }
