@@ -23,68 +23,57 @@
 <body>
     <div class="myContainer">
         <div class="row">
-            <!-- left panel -->
-            <div class="col-3">
-                <!-- The side panel -->
-                <div class="sidebar">
-                    <div class="sidebar-header">
+            <div class="col-3"> <!-- left panel -->
+                <div class="sidebar position-fixed">
+                    <div class="sidebar-header bg-primary text-white py-2">
                         <div class="row d-flex justify-content-center align-items-center">
                             <div class="col-2">
-                                <img src="doll.jpeg" id="icon" alt="" style="height: 60px; width: 60px; border-radius: 50%; padding: 2px; background-color: #99ff0bb7;">
+                                <img src="doll.jpeg" id="icon" alt=""
+                                    style="height: 60px; width: 60px; border-radius: 50%; padding: 2px; background-color: #99ff0bb7;">
                             </div>
-                           <div class="col text-center">
-                                 <h6 id="user-name">User Name</h6>
-                           </div>
+                            <div class="col text-center">
+                                <h6 id="user-name">Aliza Khan</h6>
+                            </div>
                         </div>
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-gear m-2"></i>Settings</a>
+                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-gear m-2"></i>Settings</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-signs-post m-2"></i>New Posts</a>
+                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-signs-post m-2"></i>New Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-face-smile-beam m-2"></i>Friends</a>
+                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-face-smile-beam m-2"></i>Friends</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fa-solid fa-people-group m-2"></i>Groups</a>
+                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-people-group m-2"></i>Groups</a>
                         </li>
-                        <!-- Add more items here -->
                     </ul>
                 </div>
             </div>
-         
-            <div class="col" style="background-color: rgb(147, 145, 146); height: 100vh;">
-                <div class="card"> <ul class="nav justify-content-center" style="background-color: rgb(255, 255, 255);">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Active</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li>
-                    <li class="nav-item">
-                        <button onclick="submit()" class="btn btn-primary"> Create Now</button>
-                    </li>
-                </ul>
-               
+
+            <div class="col mx-4 p-1" style="background-color: #ccc;"> <!-- main content -->
+                <div class="card">  
+                    <!-- #454b72, #1D1842, #8E0D3C -->
+                    <ul class="nav justify-content-between" style="background-color: #0D6EFD; padding: 5px;">
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <button type="button" onclick="submit()" class="btn custom-btn">Small button</button>
+                        </li>
+                    </ul>
+
                     <div class="card-body">
                         <div class="editor">
                             <div id="editor"></div>
                         </div>
                     </div>
                 </div>
-                <div id="post">
-                </div>
+                <div id="post"> <!-- Here post are created --> </div>
             </div>
-            <!-- right panel -->
-            <div class="col-2" >
+            <div class="col-2"> <!-- right panel -->
                 <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"><i class="fa-solid fa-gear"></i>
                     Link with href
@@ -115,9 +104,6 @@
             </div>
         </div>
     </div>
-
-
     <script src="app.js"></script>
 </body>
-
 </html>

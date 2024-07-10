@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    /* color: white; */
 }
 
 /* Main Page */
@@ -10,7 +9,8 @@
 .main-bg {
     background-image: linear-gradient(to bottom, #454b72, #1D1842, #8E0D3C);
     background-position: center;
-    height: 100vh;
+   height: 100vh;
+   width: 100vw;
     color: white;
     margin: 0;
     background-repeat: no-repeat;
@@ -155,25 +155,22 @@ label {
     color: rgb(220, 4, 4);
     font-weight: bold;
 }
-/* blog page */
-/* .myContainer{
-    height: 100vh;
-} */
 
-/* Add some basic styling to the side panel */
+/* BLOG PAGE */
+.myContainer{
+    height: 100vh;
+    width: 100vw;
+}
 .sidebar {
-    width: 320px;
-    /* height: 100vh; */
-    background-color: #f0f0f0;
+    width: 300px;
     padding: 20px;
     border-right: 1px solid #ddd;
   }
   
   .sidebar-header {
-    background-color: #b91919;
     color: #fff;
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    /* border-bottom: 1px solid #ddd; */
   }
   
   .sidebar ul {
@@ -188,20 +185,38 @@ label {
   
   .sidebar a {
     text-decoration: none;
-    color: #337ab7;
+    /* color: #337ab7; */
     padding: 10px;
     margin: 5px;
   }
   
   .sidebar a:hover {
-    background-color: #337ab7;
+    background-color: #fcbcd3;
     color: #fff;
     border-radius: 5px;
   }
 
-#user-name{
-    font-size: larger;
-}
+#user-name {
+    font-size: 1.2rem;
+    animation: text-fade-in-out 2s ease-in-out infinite;
+  }
+  
+  @keyframes text-fade-in-out {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+  }
+
+
 
 .post {
     background-color: white;
@@ -211,4 +226,9 @@ label {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgb(252, 233, 233);
+}
+
+.bg-primary {
+    --bs-bg-opacity: 1;
+    background-color: #8E0D3C !important;
 }
