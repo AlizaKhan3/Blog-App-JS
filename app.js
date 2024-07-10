@@ -92,9 +92,7 @@ function signUp() {
     var arrData = JSON.parse(mylocalStorage); //  || []; // Initialize an empty array if no data exists
     if (!arrData) {
         arrData = [];
-
     }
-
 
     var userAccounts = {
         userFirstName: userFirstName,
@@ -111,13 +109,33 @@ function signUp() {
 // ----------------------------------------------------------------------
 
 //LOGIN Page ---incomplete
-// function signUp() {
-//     let userFirstName = firstName.value.trim();
-//     let userLastName = lastName.value.trim();
-//     let userEmail = email.value.trim();
-//     let userPass = password.value.trim();
-//     let fullName = userFirstName + " " + userLastName;
-// }
+function Login() {
+    let userFirstName = firstName.value.trim();
+    let userLastName = lastName.value.trim();
+    let userEmail = email.value.trim();
+    let userPass = password.value.trim();
+    let fullName = userFirstName + " " + userLastName;
+    var checkLocalStorage = JSON.parse(localStorage.getItem("userAccounts"));
+
+    if (checkLocalStorage.userEmail.value === userEmail.value && checkLocalStorage.userPass.value === userPass.value){
+        Swal.fire({
+            icon: "success",
+            title: "Welcome Back" + fullName.toLocaleUpperCase(),
+            text: "Lets Create and Share together",
+            showConfirmButton: false,
+            timer: 2000
+        });
+        setTimeout(() => {
+            window.location.href = "./blog.html"
+        }, 2000)
+    }else{
+        Swal.fire({
+            icon: "error",
+            text: "User not found!",
+            showConfirmButton: true,
+        });
+    }
+}
 
 
 
