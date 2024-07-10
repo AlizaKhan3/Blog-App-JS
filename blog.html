@@ -21,15 +21,15 @@
 </head>
 
 <body>
-    <div class="myContainer">
-        <div class="row">
+    <div class="myContainer" style="background-color: #E5D8B6;">
+        <div class="row" >
             <div class="col-3"> <!-- left panel -->
                 <div class="sidebar position-fixed">
                     <div class="sidebar-header bg-primary text-white py-2">
                         <div class="row d-flex justify-content-center align-items-center">
                             <div class="col-2">
                                 <img src="doll.jpeg" id="icon" alt=""
-                                    style="height: 60px; width: 60px; border-radius: 50%; padding: 2px; background-color: #99ff0bb7;">
+                                    style="height: 60px; width: 60px; border-radius: 50%; padding: 2px; background-color: #E5D8B6;">
                             </div>
                             <div class="col text-center">
                                 <h6 id="user-name">Aliza Khan</h6>
@@ -38,7 +38,7 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-gear m-2"></i>Settings</a>
+                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-gear m-2"></i>Issues</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="#"><i class="fa-solid fa-signs-post m-2"></i>New Posts</a>
@@ -53,15 +53,15 @@
                 </div>
             </div>
 
-            <div class="col mx-3 px-4 pb-5 pt-2" style="background-color: #E5D8B6;"> <!-- main content -->
+            <div class="col-6 mx-3 px-4 pb-5" style="background-color: #E5D8B6;"> <!-- main content -->
                 <div class="card">  
                     <!-- #454b72, #1D1842, #8E0D3C -->
                     <ul class="nav justify-content-between" style="background-color: #C5107A; padding: 5px;">
                         <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            <a class="nav-link disabled mt-2" style="color: #ffffff; font-weight: 700;" aria-disabled="true">Post Now</a>
                         </li>
                         <li class="nav-item m-2">
-                            <button type="button" onclick="submit()" class="btn custom-btn">Small button</button>
+                            <button type="button" onclick="submit()" class="btn custom-btn">Create Post</button>
                         </li>
                     </ul>
 
@@ -74,14 +74,14 @@
                 <div id="post"> <!-- Here post are created --> </div>
             </div>
             <div class="col-2"> <!-- right panel -->
-                <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                <a class="btn custom-btn mt-3" style="background-color: #C5107A;" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"><i class="fa-solid fa-gear"></i>
-                    Link with href
+                    Settings
                 </a>
                 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
                     aria-labelledby="offcanvasExampleLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Create, Share & Enjoy!</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
@@ -91,12 +91,11 @@
                         </div>
                         <div class="dropdown mt-3">
                             <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                                Dropdown button
+                                Account Settings
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                                <li><a class="dropdown-item" href="signup.html">Add Another Account?</a></li>
                             </ul>
                         </div>
                     </div>
