@@ -156,14 +156,14 @@ label {
     font-weight: bold;
 }
 /* blog page */
-.myContainer{
+/* .myContainer{
     height: 100vh;
-}
+} */
 
 /* Add some basic styling to the side panel */
 .sidebar {
     width: 320px;
-    height: 100vh;
+    /* height: 100vh; */
     background-color: #f0f0f0;
     padding: 20px;
     border-right: 1px solid #ddd;
@@ -198,15 +198,17 @@ label {
     color: #fff;
     border-radius: 5px;
   }
-  
-/* #user-image{
-    width: 100px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #8E0D3C;
-} */
 
 #user-name{
     font-size: larger;
-    
+}
+
+.post {
+    background-color: white;
+    height: 350px;
+    border: 10px solid rgb(69, 69, 61);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(252, 233, 233);
 }

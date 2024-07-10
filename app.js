@@ -151,11 +151,15 @@ const quill = new Quill('#editor', {
     placeholder: "Write something....",
 });
 
-
-function submit(){
-    event.preventDefault("");
-    const post = document.getElementById("post");
-    // console.log(quill.root.innerHTML);
+    function submit(){
+        event.preventDefault("");
+        const post = document.getElementById("post");
+        const newPost = document.createElement("div");
+        newPost.className = "post";
+        newPost.innerHTML = quill.root.innerHTML;
+        post.appendChild(newPost);
+    }
+    // const post = document.getElementById("post");
     // post.innerHTML = quill.root.innerHTML;
 
-}
+ // console.log(quill.root.innerHTML);
