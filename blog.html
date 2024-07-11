@@ -28,7 +28,7 @@
 <body>
     <div class="myContainer">
         <div class="row" >
-            <div class="col-3"> <!-- left panel -->
+            <div class="col-1 col-md-3"> <!-- left panel -->
                 <div class="sidebar position-fixed">
                     <div class="sidebar-header bg-primary text-white py-2">
                         <div class="row d-flex justify-content-center align-items-center">
@@ -43,10 +43,10 @@
                     </div>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-gear m-2"></i>Issues</a>
+                            <a class="nav-link text-dark" href="login.html"><i class="fa-solid fa-right-to-bracket m-2"></i>Logout</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" href="#"><i class="fa-solid fa-signs-post m-2"></i>New Posts</a>
+                            <a class="nav-link text-dark" href="signup.html"><i class="fa-solid fa-user-plus m-2"></i>Add Account</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" href="#"><i class="fa-solid fa-face-smile-beam m-2"></i>Friends</a>
@@ -58,9 +58,8 @@
                 </div>
             </div>
 
-            <div class="col-6 mx-3 px-4 pb-5" style="background-color: #E5D8B6;"> <!-- main content -->
-                <div class="card">  
-                    <!-- #454b72, #1D1842, #8E0D3C -->
+            <div class="col col-md-8 mx-3 px-4 pb-5" style="background-color: #E5D8B6;"> <!-- main content -->
+                <div class="card">
                     <ul class="nav justify-content-between" style="background-color: #C5107A; padding: 5px;">
                         <li class="nav-item">
                             <a class="nav-link disabled mt-2" style="color: #ffffff; font-weight: 700;" aria-disabled="true">Post Now</a>
@@ -69,7 +68,6 @@
                             <button type="button" onclick="submit()" class="btn custom-btn">Create Post</button>
                         </li>
                     </ul>
-
                     <div class="card-body">
                         <div class="editor">
                             <div id="editor"></div>
@@ -77,8 +75,8 @@
                     </div>
                 </div>
                 <div id="post"> <!-- Here post are created --> </div>
-            </div>
-            <div class="col-2"> <!-- right panel -->
+            </div><!-- right panel -->
+            <!-- <div class="col-2"> 
                 <a class="btn custom-btn mt-3" style="background-color: #C5107A;" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
                     aria-controls="offcanvasExample"><i class="fa-solid fa-gear"></i>
                     Settings
@@ -105,7 +103,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <script src="app.js"></script>

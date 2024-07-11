@@ -110,31 +110,34 @@ function signUp() {
 
 //LOGIN Page ---incomplete
 function Login() {
-    let userFirstName = firstName.value.trim();
-    let userLastName = lastName.value.trim();
-    let userEmail = email.value.trim();
-    let userPass = password.value.trim();
-    let fullName = userFirstName + " " + userLastName;
-    var checkLocalStorage = JSON.parse(localStorage.getItem("userAccounts"));
+    setTimeout(()=>{
+        window.location.href = "login.html"
+    },1000)
+    // let userFirstName = firstName.value.trim();
+    // let userLastName = lastName.value.trim();
+    // let userEmail = email.value.trim();
+    // let userPass = password.value.trim();
+    // let fullName = userFirstName + " " + userLastName;
+    // var checkLocalStorage = JSON.parse(localStorage.getItem("userAccounts"));
 
-    if (checkLocalStorage.userEmail.value === userEmail.value && checkLocalStorage.userPass.value === userPass.value){
-        Swal.fire({
-            icon: "success",
-            title: "Welcome Back" + fullName.toLocaleUpperCase(),
-            text: "Lets Create and Share together",
-            showConfirmButton: false,
-            timer: 2000
-        });
-        setTimeout(() => {
-            window.location.href = "./blog.html"
-        }, 2000)
-    }else{
-        Swal.fire({
-            icon: "error",
-            text: "User not found!",
-            showConfirmButton: true,
-        });
-    }
+    // if (checkLocalStorage.userEmail.value === userEmail.value && checkLocalStorage.userPass.value === userPass.value){
+    //     Swal.fire({
+    //         icon: "success",
+    //         title: "Welcome Back" + fullName.toLocaleUpperCase(),
+    //         text: "Lets Create and Share together",
+    //         showConfirmButton: false,
+    //         timer: 2000
+    //     });
+    //     setTimeout(() => {
+    //         window.location.href = "./blog.html"
+    //     }, 2000)
+    // }else{
+    //     Swal.fire({
+    //         icon: "error",
+    //         text: "User not found!",
+    //         showConfirmButton: true,
+    //     });
+    // }
 }
 
 
@@ -170,7 +173,7 @@ const quill = new Quill('#editor', {
 });
 
     function submit(){
-        event.preventDefault("");
+        // event.preventDefault("");
         const post = document.getElementById("post");
         const newPost = document.createElement("div");
         newPost.className = "post";

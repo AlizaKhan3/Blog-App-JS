@@ -229,7 +229,7 @@ label {
   
   .post {
     background-color: white;
-    height: 350px;
+    /* height: 350px; */
     border: 10px solid #C5107A; /* Changed to a dark pinkish color */
     margin: 20px;
     padding: 20px;
