@@ -1,3 +1,13 @@
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker
+        .register("/serviceWorker.js")
+        .then(res => console.log("service worker registered"))
+        .catch(err => console.log("service worker not registered", err))
+    })
+  }
+
+
 let getStart = document.getElementById("getStart");
 function getStarted() {
     setInterval(() => {
@@ -29,7 +39,7 @@ let password = document.getElementById("password");
 let confirmPassword = document.getElementById("confirmPassword");
 
 // let icon = document.getElementById("icon");
-// icon.src = "http://www.google.com/intl/en_com/images/logo_plain.png";
+// icon.src = "http://www.google.com/intl/en_com/assets/logo_plain.png";
 // // var src = document.getElementById("header");
 // src.appendChild(icon);
 
