@@ -1,11 +1,27 @@
 if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function() {
-      navigator.serviceWorker
-        .register("/serviceWorker.js")
-        .then(res => console.log("service worker registered"))
-        .catch(err => console.log("service worker not registered", err))
+    window.addEventListener("load", function () {
+        navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => {
+                console.log("service worker regsitered");
+                Notification.requestPermission().then(res => {
+                    if (Notification.permission == 'granted') {
+                        console.log("granted permission");
+                        return
+                    }
+                    console.log(res)
+                })
+            })
+            .catch(err => console.log("service worker not registered", err))
     })
-  }
+    navigator.serviceWorker.ready.then((Notification) => {
+        var options = {
+            body: "body text",
+            icon: "assets/icons/icon-36x36.png"
+        };
+        Notification.showNotification('Title Notification', options);
+    })
+}
 
 
 let getStart = document.getElementById("getStart");
@@ -120,9 +136,9 @@ function signUp() {
 
 //LOGIN Page ---incomplete
 function Login() {
-    setTimeout(()=>{
+    setTimeout(() => {
         window.location.href = "login.html"
-    },1000)
+    }, 1000)
     // let userFirstName = firstName.value.trim();
     // let userLastName = lastName.value.trim();
     // let userEmail = email.value.trim();
@@ -153,26 +169,26 @@ function Login() {
 
 
 //Blog Page
-const toolbarOptions =[
+const toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
     ['link', 'image', 'video', 'formula'],
-  
+
     [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-    [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
-    [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-    [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+    [{ 'list': 'ordered' }, { 'list': 'bullet' }, { 'list': 'check' }],
+    [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
+    [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
     [{ 'direction': 'rtl' }],                         // text direction
-  
+
     [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
     [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-  
+
     [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
     [{ 'font': [] }],
     [{ 'align': [] }],
-  
+
     ['clean']                                         // remove formatting button
-  ];
+];
 
 const quill = new Quill('#editor', {
     modules: {
@@ -182,15 +198,15 @@ const quill = new Quill('#editor', {
     placeholder: "Write something....",
 });
 
-    function submit(){
-        // event.preventDefault("");
-        const post = document.getElementById("post");
-        const newPost = document.createElement("div");
-        newPost.className = "post";
-        newPost.innerHTML = quill.root.innerHTML;
-        post.appendChild(newPost);
-    }
-    // const post = document.getElementById("post");
-    // post.innerHTML = quill.root.innerHTML;
+function submit() {
+    // event.preventDefault("");
+    const post = document.getElementById("post");
+    const newPost = document.createElement("div");
+    newPost.className = "post";
+    newPost.innerHTML = quill.root.innerHTML;
+    post.appendChild(newPost);
+}
+// const post = document.getElementById("post");
+// post.innerHTML = quill.root.innerHTML;
 
- // console.log(quill.root.innerHTML);
+// console.log(quill.root.innerHTML);
