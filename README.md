@@ -53,17 +53,17 @@ icons: When the browser launches the splash screen, it will be the icon displaye
 
 <b>2) Link your manifest.json fill with HTML (index.html) </b>  <br>
     <link rel="manifest" href="manifest.json" />  <br>
-<!-- ios support --> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-72x72.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-96x96.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-128x128.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-144x144.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-152x152.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-192x192.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-384x384.png" /> <br>
-<link rel="apple-touch-icon" href="images/icons/icon-512x512.png" /> <br>
-<meta name="apple-mobile-web-app-status-bar" content="#db4938" /> <br>
-<meta name="theme-color" content="#db4938" /> <br>
+    //ios support <br>
+link rel="apple-touch-icon" href="images/icons/icon-72x72.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-96x96.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-128x128.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-144x144.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-152x152.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-192x192.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-384x384.png" <br>
+link rel="apple-touch-icon" href="images/icons/icon-512x512.png" <br>
+meta name="apple-mobile-web-app-status-bar" content="#db4938" <br>
+meta name="theme-color" content="#db4938" <br>
  <br>
 <b>3) Moving towards Service Worker, create a new javascript file serviceWorker.js </b>  <br>
    const staticDevCoffee = "dev-coffee-site-v1" <br>
